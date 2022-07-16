@@ -15,7 +15,7 @@ const int WIDTH = 2;
 const uint8_t *FONT = Arial14;
 //const uint8_t *FONT = SystemFont5x7;
 
-const char *MESSAGE = "abcdefghijklmnopqrstuvwxyz";
+const char *MESSAGE = "NITROMAX - DIGIPONIC ";
 
 SoftDMD dmd(WIDTH,1);  // DMD controls the entire display
 DMD_TextBox box(dmd);  // "box" provides a text box to automatically write to/scroll the display
@@ -32,7 +32,6 @@ void setup() {
 void loop() {
   const char *next = MESSAGE;
   while(*next) {
-    Serial.print(*next);
     box.print(*next);
     delay(200);
     next++;
